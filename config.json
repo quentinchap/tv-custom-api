@@ -1,0 +1,131 @@
+{
+    "name": "channel api",
+    "version": "0.1.3",
+    "slug": "api_channel",
+    "description": "Allow to add possibilities for channel selection. Exemple: TF1 = 1 = tf1 = tf 1, etc.",
+    "startup": "before",
+    "boot": "auto",
+    "options": {
+        "key": "key",
+        "domain": "domain",
+        "homeAssistantPass": "pass",
+        "ssl": true,
+        "users": [
+            { "login": "test", "password": "test" }
+        ],
+        "channels": [{
+                "stdValue": "TF1",
+                "compatibleValue": "1,tf1,tf 1"
+            },
+            {
+                "stdValue": "France 2",
+                "compatibleValue": "2,france2,france 2"
+            },
+            {
+                "stdValue": "F3 Auvergne",
+                "compatibleValue": "3,france3,france 6"
+            },
+            {
+                "stdValue": "France 5",
+                "compatibleValue": "5,france6,france 5"
+            },
+            {
+                "stdValue": "M6",
+                "compatibleValue": "6,m6,m 6"
+            },
+            {
+                "stdValue": "Arte",
+                "compatibleValue": "7,arte"
+            },
+            {
+                "stdValue": "C8",
+                "compatibleValue": "8,c8,c 8"
+            },
+            {
+                "stdValue": "W9",
+                "compatibleValue": "9,w9,w 9"
+            },
+            {
+                "stdValue": "TMC",
+                "compatibleValue": "10,tmc,t m c"
+            },
+            {
+                "stdValue": "NT1",
+                "compatibleValue": "11,nt1,nt 1"
+            },
+            {
+                "stdValue": "NRJ12",
+                "compatibleValue": "12,m6,m 6"
+            },
+            {
+                "stdValue": "LCP",
+                "compatibleValue": "13,m6,m 6"
+            },
+            {
+                "stdValue": "France 4",
+                "compatibleValue": "14,m6,m 6"
+            },
+            {
+                "stdValue": "BFM TV",
+                "compatibleValue": "15,m6,m 6"
+            },
+            {
+                "stdValue": "CNEWS",
+                "compatibleValue": "16,m6,m 6"
+            },
+            {
+                "stdValue": "CSTAR",
+                "compatibleValue": "17,m6,m 6"
+            },
+            {
+                "stdValue": "Gulli",
+                "compatibleValue": "18,m6,m 6"
+            },
+            {
+                "stdValue": "France Ô",
+                "compatibleValue": "19,m6,m 6"
+            },
+            {
+                "stdValue": "HD1",
+                "compatibleValue": "20,m6,m 6"
+            },
+            {
+                "stdValue": "L'Equipe 21",
+                "compatibleValue": "21,m6,m 6"
+            },
+            {
+                "stdValue": "6er",
+                "compatibleValue": "22,m6,m 6"
+            },
+            {
+                "stdValue": "NUMERO 23",
+                "compatibleValue": "23,m6,m 6"
+            },
+            {
+                "stdValue": "HD1",
+                "compatibleValue": "24,m6,m 6"
+            },
+            {
+                "stdValue": "RMC Découverte",
+                "compatibleValue": "25,m6,m 6"
+            }
+        ]
+    },
+    "schema": {
+        "key": "str",
+        "domain": "str",
+        "homeAssistantPass": "str",
+        "ssl": "bool",
+        "users": [
+            { "login": "str", "password": "str" }
+        ],
+        "channels": [{
+            "stdValue": "str",
+            "compatibleValue": "str"
+        }]
+    },
+    "map": ["ssl:rw"],
+    "ports": {
+        "8245/tcp": 8245
+    }
+}
